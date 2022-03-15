@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+</style>
+</head>
+<body>
+
+<button id = 'click' class ='btn'>Compute</button>
+<form action="/action_page.php">
+  <label for="fname">first var:</label>
+  <input type="text" id="first" name="first"><br><br>
+
+</form>
+<form action="/action_page.php">
+  <label for="fname">second var:</label>
+  <input type="text" id="second" name="second"><br><br>
+
+</form>
+
+<label for="output">The area is: </label><input type="textbox" name="output"></input>
+
+<script>
+    const btnElement = document.querySelector('#click');
+    let count=0;
+    btnElement.addEventListener('click', function(){
+      var vars1 = document.getElementsByName('first')[0].value;
+      var vars2 = document.getElementsByName('second')[0].value;
+      var out = parseFloat(vars1) + parseFloat(vars2);
+
+document.getElementsByName('output')[0].value= out;   
+
+});
+</script>
+
+</body>
+</html>
